@@ -1,0 +1,110 @@
+\chapter{Specifica dei requisiti}\label{cap:specifica_dei_requisiti}
+La prima fase del processo di realizzazione del progetto \`e certamente l'analisi dei requisiti, nella quale vengono identificate tutte quelle che sono le funzionalit\`a e le caratteristiche della piattaforma. Ci\`o deve avvenire in maniera esaustiva, al fine di progettare la piattaforma in modo tale che possa soddisfare ogni esigenza degli utenti. Da questa fase si ricava un documento, denominato ``specifica dei requisiti'' e riportato in questo capitolo, nel quale vengono descritti, utilizzando il linguaggio naturale, tutti i requisiti individuati durante l'analisi.
+
+\section{Autenticazione}\label{cap:autenticazione}
+I requisiti di autenticazione riguardano principalmente la fasi di registrazione, nella quale un utente crea un nuovo account, e la gestione dell'accesso alla piattaforma tramite le credenziali scelte durante la registrazione.
+
+\subsection{Registrazione}
+Ogni nuovo utente che vuole registrarsi alla piattaforma dovr\`a compilare un modulo per fornire le informazione personali (nome, username) e le credenziali di accesso alla piattaforma (indirizzo e-mail, password). L'username permette di identificare univocamente l'utente all'interno piattaforma.
+
+Una volta inviato tale modulo ricever\`a, nella casella postale dell'indirizzo e-mail fornito, un link per verificare il proprio indirizzo e-mail.
+
+\subsection{Accesso}
+Per accedere alla piattaforma, ogni utente registrato deve compilare un modulo per fornire le sue credenziali di accesso (e-mail, password). Inoltre pu\`o indicare se vuole rimanere connesso alla piattaforma anche dopo la scadenza della sessione, senza dover reinserire le credenziali di accesso.
+
+Nel caso in cui non si dovesse ricordare la password potr\`a fornire l'indirizzo e-mail, con il quale si \`e registrato alla piattaforma, cos\`i da ricevere per e-mail un link per reimpostarla.
+\section{Impostazioni}
+La piattaforma deve prevedere una sezione dedicata alle impostazioni nella quale ogni utente potr\`a modificare le proprie informazioni.
+\subsection{Account}
+Nella sezione dedicata all'account, sar\`a presente un modulo per permettere all'utente di modificare il proprio username e il proprio indirizzo e-mail.
+
+\subsection{Profilo}
+Nella sezione dedicata al profilo, sar\`a presente un modulo per permettere all'utente di modificare il proprio nome e aggiornare o rimuovere la propria immagine di profilo.
+
+\subsection{Password}
+Nella sezione dedicata alla password, sar\`a presente un modulo per permettere all'utente di impostare una nuova password, per fare ci\`o, dovr\`a anche fornire la sua password attuale.
+
+\subsection{Chiusura account}
+Tra le voci del men\`u delle impostazioni sar\`a presente l'opzione per chiudere il proprio account. Per compiere tale azione l'utente dovr\`a fornire nuovamente la sua password attuale.
+
+Una volta chiuso l'account, l'utente verr\`a disconnesso dalla piattaforma e avr\`a 60 giorni per effettuare nuovamente l'accesso e ripristinare il proprio account.
+\section{Gestione del Portfolio}
+La piattaforma deve prevedere una sezione dedicata alla gestione dei contenuti presenti nel portfolio dell'utente. Tale sezione prende il nome di CMS (Content Management System) e permetter\`a
+di gestire i contenuti delle sezioni del portfolio.
+\subsection{Creazione portfolio}
+Accedendo alla sezione CMS, se l'utente non ha ancora creato il proprio portfolio ed ha verificato il proprio indirizzo e-mail, verr\`a portato ad una pagina contenente un modulo nel quale dovr\`a fornire il nome del portfolio che vuole creare, il quale identificher\`a univocamente il portfolio all'interno piattaforma.
+
+\subsection{Pagina principale}
+La pagina principale del CMS conterr\`a la lista delle sezioni visibili del portfolio e permetter\`a di creare una nuova galleria. Inoltre, per ogni sezione nella lista, sar\`a presente un pulsante per modificare le informazioni di tale sezione.
+
+\subsection{Gestione delle gallerie}
+La sezione del CMS dedicata alle gallerie permetter\`a all'utente di creare nuove gallerie e modificare, eliminare ed archiviare le gallerie esistenti. Le gallerie eliminate dall'utente vengono inserite in un cestino in modo tale da essere ripristinate in un secondo momento.
+
+\subsubsection{Gallerie principali}
+Nella sezione principale dedicata alle gallerie sar\`a presente la lista delle gallerie visibili e archiviate e, per ogni galleria nella lista, saranno presenti i pulsanti per modificare lo stato di archiviazione, modificare le informazioni ed eliminare tale galleria.
+
+\subsubsection{Creazione}
+Nella sezione dedicata alla creazione di una nuova galleria, sar\`a presente un modulo per permettere all'utente di fornire il nome della nuova galleria, il quale dovr\`a essere univoco nel suo portfolio, e una descrizione.
+
+\subsubsection{Modifica}
+Il pulsante dedicato alla modifica della galleria porta l'utente nella sezione dedicata alla modifica delle informazioni di tale galleria, nella quale, sar\`a presente un modulo per permettere la modifica del nome e della descrizione. Inoltre, in tale sezione, l'utente potr\`a modificare la posizione della galleria nella barra di navigazione del proprio portfolio.
+
+\subsubsection{Archiviazione}
+Il pulsante dedicato allo stato di archiviazione della galleria permette di archiviare, in modo tale che non sia visibile nel proprio portfolio, e disarchiviare tale galleria.
+
+\subsubsection{Eliminazione}
+Il pulsante dedicato all'eliminazione della galleria permette di eliminare tale galleria, rimuovendola dalla lista e spostandola nel cestino.
+
+\subsubsection{Cestino}
+La sezione dedicata alle gallerie presenta una sotto sezione per la gestione del cestino, nella quale sar\`a presente la lista delle gallerie eliminate e, per ogni galleria nella lista, saranno presenti i pulsanti per ripristinare ed eliminare definitivamente tale galleria.
+
+\subsubsection{Ripristino}
+Il pulsante dedicato al ripristino della galleria permette di ripristinare una galleria, rimuovendola dal cestino.
+
+\subsubsection{Eliminazione definitiva}
+Il pulsante dedicato all'eliminazione definitiva della galleria permette di eliminare definitivamente le informazioni e il contenuto di una galleria.
+
+\subsection{Gestione dei post}
+In ogni galleria, oltre che a visualizzare le relative informazioni della galleria, sar\`a possibile creare nuovi post e modificare ed eliminare i post esistenti. Ogni post rappresenta un'opera dell'artista ed \`e costituito da un media, un titolo ed una descrizione.
+
+All'intero della galleria, quindi, sar\`a presente una lista dei post creati dall'utente e, per ogni post nella lista, saranno presenti i pulsanti per modificare le informazioni ed eliminare tale post.
+
+\subsubsection{Creazione}
+Nella sezione dedicata alla creazione di un nuovo post, sar\`a presente un modulo per permettere all'utente di fornire il media, il titolo e la descrizione del post da creare.
+
+\subsubsection{Modifica}
+Il pulsante dedicato alla modifica del post porta l'utente nella sezione dedicata alla modifica delle informazioni di tale post, nella quale, sar\`a presente un modulo per permettere la modifica del media, del titolo e della descrizione.
+
+\subsubsection{Eliminazione}
+Il pulsante dedicato all'eliminazione del post permette di eliminare definitivamente le informazioni e il contenuto di tale post.
+
+
+\subsection{About me}
+La sezione del CMS dedicata alla presentazione dell'artista prende il nome di ``About me'' e permetter\`a all'utente di presentarsi e fornire i propri contatti. Sar\`a, quindi, presente un modulo per permettere all'utente di fornire una descrizione della propria persona e l'indirizzo e-mail per ricevere contatti.
+
+\subsection{Impostazioni}
+La sezione di CMS deve prevedere una sezione dedicata alle impostazioni del portfolio nella quale ogni utente potr\`a modificare le informazioni e lo stato del proprio portfolio.
+
+\subsubsection{Informazioni portfolio}
+Nella sezione dedicata alle informazioni del portfolio, sar\`a presente un modulo per permettere all'utente di modificare il nome e l'icona del portfolio.
+
+\subsubsection{Archiviazione}
+Tra le voci del men\`u delle impostazioni sar\`a presente l'opzione per archiviare il proprio portfolio, in modo tale che non sia visibile pubblicamente, e disarchiviarlo.
+
+\subsubsection{Eliminazione}
+Tra le voci del men\`u delle impostazioni sar\`a presente l'opzione per eliminare il proprio portfolio. Una volta eliminato, l'utente verr\`a portato alla pagina principale della piattaforma.
+
+Il portfolio pu\`o essere ripristinato in qualsiasi momento.
+
+
+\section{Visualizzazione portfolio}
+Ogni utente, autenticato e non, potr\`a visualizzare i portfolio pubblici degli utenti della piattaforma.
+
+Per ogni portfolio verr\`a visualizzato il nome, l'icona e una barra di navigazione per navigare tra le varie gallerie presenti nel portfolio e visualizzare la sezione ``About me'' dedicata alla presentazione dell'autore del portfolio.
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+\chapter{Endpoint dell'API}\label{cap:endpoint_api}
+\section{Autenticazione}
+\begin{table}[h]
+	\begin{tabularx}{\textwidth}{l X}
+		\hline
+		\textbf{Metodo} & \textbf{URI} \\
+		\hline
+		\textcolor{get}{\textbf{GET}}    &     auth/email  \\
+		\textcolor{post}{\textbf{POST}} &           auth/email/verification-notification  \\
+		\textcolor{get}{\textbf{GET}}     &   auth/email/verify/\{id\}/\{hash\}   \\
+		\textcolor{post}{\textbf{POST}}     &       auth/forgot-password   \\
+		\textcolor{post}{\textbf{POST}}      &      auth/login  \\
+		\textcolor{delete}{\textbf{DELETE}} &          auth/logout \\
+		\textcolor{post}{\textbf{POST}}    &        auth/register  \\
+		\textcolor{post}{\textbf{POST}}   &         auth/reset-password   \\
+		\textcolor{get}{\textbf{GET}}      &   auth/user   \\
+		\textcolor{get}{\textbf{GET}}     &    auth/username  \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\section{Impostazioni utente}
+\begin{table}[h]
+	\begin{tabularx}{\textwidth}{l X}
+		\hline
+		\textbf{Metodo} & \textbf{URI} \\
+		\hline
+		\textcolor{gray}{\textbf{PATCH}}    &        v1/users/\{user\}\\
+		\textcolor{delete}{\textbf{DELETE}}  &        v1/users/\{user\}\\
+		\textcolor{gray}{\textbf{PATCH}}     &      v1/users/\{user\}/delete\\
+		\textcolor{gray}{\textbf{PATCH}}    &      v1/users/\{user\}/email\\
+		\textcolor{post}{\textbf{POST}}    &       v1/users/\{user\}/password\\
+		\textcolor{get}{\textbf{GET}} &       v1/users/\{user\}/propic\\
+		\textcolor{post}{\textbf{POST}}      &     v1/users/\{user\}/propic\\
+		\textcolor{delete}{\textbf{DELETE}}    &     v1/users/\{user\}/propic\\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\section{Content management system}
+\begin{table}[h]
+	\begin{tabularx}{\textwidth}{l X}
+		\hline
+		\textbf{Metodo} & \textbf{URI} \\
+		\hline
+\textcolor{get}{\textbf{GET}}   &     v1/cms  \\
+		  \textcolor{post}{\textbf{POST}}  &          v1/cms/portfolios   \\
+		  \textcolor{get}{\textbf{GET}}     &   v1/cms/portfolios/name  \\
+		  \textcolor{get}{\textbf{GET}}     &   v1/cms/portfolios/\{portfolio\}  \\
+		  \textcolor{gray}{\textbf{PATCH}}  &     v1/cms/portfolios/\{portfolio\}  \\
+		  \textcolor{delete}{\textbf{DELETE}}&          v1/cms/portfolios/\{portfolio\}    \\
+		  \textcolor{get}{\textbf{GET}}      & v1/cms/portfolios/\{portfolio\}/about-me  \\
+		  \textcolor{gray}{\textbf{PATCH}}   &        v1/cms/portfolios/\{portfolio\}/about-me   \\
+		\textcolor{gray}{\textbf{PATCH}}    &       v1/cms/portfolios/\{portfolio\}/archive  \\
+		  \textcolor{gray}{\textbf{PATCH}}    &       v1/cms/portfolios/\{portfolio\}/delete  \\
+		  \textcolor{delete}{\textbf{DELETE}}  &        v1/cms/portfolios/\{portfolio\}/delete  \\
+		  \textcolor{get}{\textbf{GET}}   &     v1/cms/portfolios/\{portfolio\}/galleries  \\
+		  \textcolor{post}{\textbf{POST}}  &          v1/cms/portfolios/\{portfolio\}/galleries    \\
+		  \textcolor{get}{\textbf{GET}}    &    v1/cms/portfolios/\{portfolio\}/galleries/deleted  \\
+		  \textcolor{get}{\textbf{GET}}    &    v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}  \\
+		  \textcolor{gray}{\textbf{PATCH}}    &   v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}   \\
+		  \textcolor{delete}{\textbf{DELETE}}  &       v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}   \\
+		  \textcolor{gray}{\textbf{PATCH}}     &      v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/archive  \\
+		  \textcolor{gray}{\textbf{PATCH}}     &      v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/delete    \\
+		  \textcolor{delete}{\textbf{DELETE}}   &       v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/delete  \\
+		  \textcolor{gray}{\textbf{PATCH}}    &       v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/index    \\
+		  \textcolor{get}{\textbf{GET}}     &   v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/posts \\
+		  \textcolor{post}{\textbf{POST}}        &    v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/posts \\
+		  \textcolor{get}{\textbf{GET}}    &    v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/posts/\{post\}\\
+		  \textcolor{post}{\textbf{POST}}     &   v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/posts/\{post\} \\
+		  \textcolor{delete}{\textbf{DELETE}}       &   v1/cms/portfolios/\{portfolio\}/galleries/\{gallery\}/posts/\{post\}\\
+		  \textcolor{get}{\textbf{GET}}     &   v1/cms/portfolios/\{portfolio\}/icon \\
+		  \textcolor{post}{\textbf{POST}}     &       v1/cms/portfolios/\{portfolio\}/icon \\
+		  \textcolor{delete}{\textbf{DELETE}}    &      v1/cms/portfolios/\{portfolio\}/icon \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\section{Portfolio pubblico}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{l X}
+		\hline
+		\textbf{Metodo} & \textbf{URI} \\
+		\hline
+		\textcolor{get}{\textbf{GET}} & v1/portfolios/\{portfolio\}\\
+		\textcolor{get}{\textbf{GET}} & v1/portfolios/\{portfolio\}/about-me\\
+		\textcolor{get}{\textbf{GET}} & v1/portfolios/\{portfolio\}/galleries/\{gallery\}\\
+		\textcolor{get}{\textbf{GET}} & v1/portfolios/\{portfolio\}/home\\
+		\hline
+	\end{tabularx}
+\end{table}
+
+  

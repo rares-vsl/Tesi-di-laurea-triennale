@@ -1,0 +1,120 @@
+%\documentclass[a4paper,twoside,11pt]{report}
+\documentclass[a4paper,singleside,11pt]{report}
+
+\usepackage{ia_urb_thesis}
+\usepackage[italian]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,
+	    amsfonts,
+	    amstext,
+	    makecell,
+	    amssymb,
+	    enumitem,
+	    mathrsfs,
+	    stmaryrd,
+	    latexsym,
+	    textcomp,
+	    %enumitem,
+	    proof,
+	    graphicx,
+float,
+rotating,
+	    epsfig,
+	tabularray,
+	    xcolor,
+	    listings,
+	    %hyperref,
+longtable,
+	    nameref,
+	    tabularx,
+	    comment}
+
+\begin{document}
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+
+\renewcommand{\lstlistingname}{Codice}
+\renewcommand{\lstlistlistingname}{Elenco dei codici}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.96}
+
+\definecolor{get}{RGB}{52,127,196}
+\definecolor{post}{RGB}{16,165,74}
+\definecolor{delete}{RGB}{204, 24, 14}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},
+	basicstyle=\linespread{1.4}\ttfamily\fontsize{10pt}{10pt}\selectfont,
+	basewidth=0.5em,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	showspaces=false,                
+	showstringspaces=false,upquote=true,
+	showtabs=false,                  
+	tabsize=3,
+	frame=tlbr,
+	framerule=0pt,
+	framextopmargin=2pt,
+	framexbottommargin=2pt,
+	framexleftmargin=5pt,
+	framexrightmargin=5pt,
+	xleftmargin=5pt,
+	xrightmargin=5pt
+}
+
+\lstset{style=mystyle}
+
+
+\titolo{Progettazione e sviluppo \\[5mm]
+	di una piattaforma \\[5mm]
+	per la gestione di portfolio artistici}
+\candidato{Rares Vasiliu}
+\relatore{Chiar.mo Prof.~Stefano Ferretti}
+
+
+\annoaccademico{2021-2022}
+
+\copertinatesi
+\dedica{
+	\textit{``Free software'' is a matter of liberty, not price. To understand\break
+		the concept, you should think of ``free'' as in ``free speech'', not as in
+		``free beer''. Free software is a matter of the users' freedom to run,\break
+		copy, distribute, study, change, and improve the software.}\break --- Richard Matthew Stallman.
+}
+
+\indice
+\indicefigure
+%\indicetabelle
+\lstlistoflistings
+\iniziatesto
+
+\include{sorgenti/cap_1}
+\include{sorgenti/cap_2}
+\include{sorgenti/cap_3}
+\include{sorgenti/cap_4}
+\include{sorgenti/cap_5}
+
+\appendix
+\include{sorgenti/app_a}
+\include{sorgenti/app_b}
+\include{sorgenti/app_c}
+\include{sorgenti/biblio}
+
+\ringraziamenti
+
+Vorrei innanzitutto esprimere la mia gratitudine al Prof. Stefano Ferretti che mi ha supportato e seguito dall'inizio del tirocinio fino alla stesura della tesi e per avermi dato l'opportunit\`a di realizzare questo progetto.
+
+Ringrazio di cuore i miei genitori per tutti i sacrifici che hanno fatto per me e per essermi stati vicino prima e dopo ogni esame, sostenendomi. Grazie  tata per avermi insegnato la calma e la pazienza per affrontare le sfide della vita. Grazie mama per avermi dato la forza e il coraggio per non mollare mai.
+
+Grazie a mia sorella, Karina, che oltre ad essere la mia artista preferita, \`e il motivo per il quale questa tesi \`e possibile.
+
+Un ringraziamento speciale va ai miei parenti per essermi stati accanto durante questi anni.
+
+
+Vorrei ringraziare i miei colleghi di corso con i quali ho affrontato questo cammino. In modo particolare, Enrico Ferretti che mi ha supportato, e sopportato, fin dal primo giorno del precorso.
+\end{document}

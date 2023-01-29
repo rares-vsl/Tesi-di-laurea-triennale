@@ -1,0 +1,183 @@
+\chapter{Implementazione del database}\label{cap:implementazione_del_database}
+\section{Utente}
+\subsection{Schema}
+\begin{lstlisting}
+Schema::create('users', function (Blueprint $table) {
+    $table->id();                   
+    $table->string('name');
+    $table->string('username')->unique();
+    $table->string('email')->unique();
+    $table->string('password');       
+    $table->boolean('propic')->default(false);
+    $table->timestamp('email_verified_at')->nullable();
+    $table->softDeletes();
+    $table->timestamps();
+});
+\end{lstlisting}
+\subsection{Relazioni}
+\begin{lstlisting}
+public function portfolio() {
+    return $this->hasOne(Portfolio::class)->withTrashed();
+}
+\end{lstlisting}
+\newpage
+\section{Portfolio}
+\subsection{Schema}
+\begin{lstlisting}
+Schema::create('portfolios', function (Blueprint $table) {
+	$table->id();
+	$table->foreignId('user_id')->unique()
+	      ->constrained()->cascadeOnDelete();
+	$table->string('name')->unique();    
+	$table->boolean('icon')->default(false);
+	$table->timestamp('archived_at', $precision = 0)->nullable();    
+	$table->softDeletes();
+	$table->timestamps();
+});
+\end{lstlisting}
+\subsection{Relazioni}
+\begin{lstlisting}
+public function user() {
+	return $this->belongsTo(User::class);
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+public function sections() {
+	return $this->hasMany(Section::class);
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+public function galleries() {
+	return $this->hasManyThrough(Gallery::class, Section::class);
+}
+\end{lstlisting}
+
+\section{Categoria sezione}
+\subsection{Schema}
+\begin{lstlisting}
+Schema::create('section_categories', function (Blueprint $table) {
+	$table->string('category')->unique();
+	$table->primary('category');
+});
+\end{lstlisting}
+
+\section{Sezione}
+\subsection{Schema}
+\begin{lstlisting}
+Schema::create('sections', function (Blueprint $table) {
+	$table->id();
+	$table->foreignId('portfolio_id')
+	      ->constrained()->cascadeOnDelete();
+	$table->string('category');
+	$table->foreign('category')
+	      ->references('category')->on('section_categories');
+	$table->string('slug');
+	$table->unique(['portfolio_id', 'slug']);
+	$table->string('name');
+	$table->unique(['portfolio_id', 'name']);
+	$table->timestamp('archived_at', $precision = 0)->nullable();
+	$table->softDeletes();
+	$table->timestamps();
+});
+\end{lstlisting}
+\subsection{Relazioni}
+\begin{lstlisting}
+public function gallery() {
+	return $this->hasOne(Gallery::class);
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+public function biography() {
+	return $this->hasOne(Biography::class);
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}
+public function contact() {
+	return $this->hasOne(Contact::class);
+}
+\end{lstlisting}
+
+\newpage
+\section{Biografia}
+\subsection{Schema}
+\begin{lstlisting}
+Schema::create('biographies', function (Blueprint $table) {
+	$table->id();
+	$table->foreignId('section_id')
+	      ->constrained()->cascadeOnDelete();
+	$table->longText('bio');
+	$table->timestamps();
+});
+\end{lstlisting}
+
+
+\section{Contatti}
+\subsection{Schema}
+\begin{lstlisting}
+Schema::create('contacts', function (Blueprint $table) {
+	$table->id();
+	$table->foreignId('section_id')
+	      ->constrained()->cascadeOnDelete();
+	$table->string('email');
+	$table->timestamps();
+});
+\end{lstlisting}
+\section{Galleria}
+\subsection{Schema}
+\begin{lstlisting}
+Schema::create('galleries', function (Blueprint $table) {
+	$table->id();
+	$table->foreignId('section_id')
+	      ->constrained()->cascadeOnDelete();
+	$table->unsignedTinyInteger('index');
+	$table->string('description');
+	$table->timestamps();
+});
+\end{lstlisting}
+\newpage
+\subsection{Relazioni}
+\begin{lstlisting}
+public function section() {
+	return $this->belongsTo(Section::class)->withTrashed();
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+public function posts() {
+	return $this->hasMany(Post::class)->orderByDesc('created_at');
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+public function contact() {
+	return $this->hasOne(Contact::class);
+}
+\end{lstlisting}
+
+\section{Post}
+\subsection{Schema}
+\begin{lstlisting}
+Schema::create('posts', function (Blueprint $table) {
+	$table->id();
+	$table->foreignId('gallery_id')
+	      ->constrained()->cascadeOnDelete();
+	$table->string('title');
+	$table->longText('description');
+	$table->string('slug')->unique();
+	$table->string('media');
+	$table->timestamps();
+});
+\end{lstlisting}
+\subsection{Relazioni}
+\begin{lstlisting}
+public function gallery() {
+	return $this->belongsTo(Gallery::class);
+}
+\end{lstlisting}
+
+

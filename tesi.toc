@@ -1,0 +1,186 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduzione}{1}{}%
+\contentsline {section}{\numberline {1.1}Contesto}{1}{}%
+\contentsline {section}{\numberline {1.2}Obiettivi della piattaforma}{2}{}%
+\contentsline {section}{\numberline {1.3}Struttura dei prossimi capitoli}{2}{}%
+\contentsline {chapter}{\numberline {2}Specifica dei requisiti}{3}{}%
+\contentsline {section}{\numberline {2.1}Autenticazione}{3}{}%
+\contentsline {subsection}{\numberline {2.1.1}Registrazione}{3}{}%
+\contentsline {subsection}{\numberline {2.1.2}Accesso}{3}{}%
+\contentsline {section}{\numberline {2.2}Impostazioni}{4}{}%
+\contentsline {subsection}{\numberline {2.2.1}Account}{4}{}%
+\contentsline {subsection}{\numberline {2.2.2}Profilo}{4}{}%
+\contentsline {subsection}{\numberline {2.2.3}Password}{4}{}%
+\contentsline {subsection}{\numberline {2.2.4}Chiusura account}{4}{}%
+\contentsline {section}{\numberline {2.3}Gestione del Portfolio}{4}{}%
+\contentsline {subsection}{\numberline {2.3.1}Creazione portfolio}{5}{}%
+\contentsline {subsection}{\numberline {2.3.2}Pagina principale}{5}{}%
+\contentsline {subsection}{\numberline {2.3.3}Gestione delle gallerie}{5}{}%
+\contentsline {subsubsection}{Gallerie principali}{5}{}%
+\contentsline {subsubsection}{Creazione}{5}{}%
+\contentsline {subsubsection}{Modifica}{5}{}%
+\contentsline {subsubsection}{Archiviazione}{5}{}%
+\contentsline {subsubsection}{Eliminazione}{6}{}%
+\contentsline {subsubsection}{Cestino}{6}{}%
+\contentsline {subsubsection}{Ripristino}{6}{}%
+\contentsline {subsubsection}{Eliminazione definitiva}{6}{}%
+\contentsline {subsection}{\numberline {2.3.4}Gestione dei post}{6}{}%
+\contentsline {subsubsection}{Creazione}{6}{}%
+\contentsline {subsubsection}{Modifica}{6}{}%
+\contentsline {subsubsection}{Eliminazione}{7}{}%
+\contentsline {subsection}{\numberline {2.3.5}About me}{7}{}%
+\contentsline {subsection}{\numberline {2.3.6}Impostazioni}{7}{}%
+\contentsline {subsubsection}{Informazioni portfolio}{7}{}%
+\contentsline {subsubsection}{Archiviazione}{7}{}%
+\contentsline {subsubsection}{Eliminazione}{7}{}%
+\contentsline {section}{\numberline {2.4}Visualizzazione portfolio}{7}{}%
+\contentsline {chapter}{\numberline {3}Design}{8}{}%
+\contentsline {section}{\numberline {3.1}Architettura del sistema}{8}{}%
+\contentsline {subsection}{\numberline {3.1.1}Architettura three-tier}{8}{}%
+\contentsline {subsection}{\numberline {3.1.2}Single Page Application}{9}{}%
+\contentsline {subsection}{\numberline {3.1.3}Web service}{9}{}%
+\contentsline {subsubsection}{L'architettura Resource-Oriented}{9}{}%
+\contentsline {subsubsection}{Comunicazione tra SPA e Web service}{10}{}%
+\contentsline {subsection}{\numberline {3.1.4}Gestione dati persistenti}{10}{}%
+\contentsline {section}{\numberline {3.2}Framework}{10}{}%
+\contentsline {subsection}{\numberline {3.2.1}Back-end}{11}{}%
+\contentsline {subsubsection}{Laravel Sanctum}{11}{}%
+\contentsline {subsection}{\numberline {3.2.2}Front-end}{11}{}%
+\contentsline {subsubsection}{Pinia}{12}{}%
+\contentsline {subsection}{\numberline {3.2.3}User interface}{12}{}%
+\contentsline {section}{\numberline {3.3}Database}{12}{}%
+\contentsline {subsection}{\numberline {3.3.1}Utente}{12}{}%
+\contentsline {subsection}{\numberline {3.3.2}Portfolio}{13}{}%
+\contentsline {subsection}{\numberline {3.3.3}Gallerie}{14}{}%
+\contentsline {subsection}{\numberline {3.3.4}Post}{14}{}%
+\contentsline {subsection}{\numberline {3.3.5}About me}{15}{}%
+\contentsline {subsection}{\numberline {3.3.6}Modello concettuale finale}{16}{}%
+\contentsline {chapter}{\numberline {4}Implementazione}{18}{}%
+\contentsline {section}{\numberline {4.1}Setup}{18}{}%
+\contentsline {subsection}{\numberline {4.1.1}Laravel}{18}{}%
+\contentsline {subsubsection}{Database}{18}{}%
+\contentsline {subsubsection}{Storage}{18}{}%
+\contentsline {subsubsection}{E-mail}{19}{}%
+\contentsline {subsubsection}{Template delle e-mail}{19}{}%
+\contentsline {subsubsection}{Verifica dell'indirizzo e-mail}{19}{}%
+\contentsline {subsubsection}{Reimpostazione delle password}{19}{}%
+\contentsline {subsubsection}{Policy}{20}{}%
+\contentsline {subsubsection}{Sanctum}{20}{}%
+\contentsline {subsubsection}{Risposte JSON}{20}{}%
+\contentsline {subsubsection}{Soft delete}{20}{}%
+\contentsline {subsubsection}{Routing}{21}{}%
+\contentsline {subsection}{\numberline {4.1.2}Vue.js}{21}{}%
+\contentsline {subsubsection}{Axios}{21}{}%
+\contentsline {subsubsection}{Vue Router}{22}{}%
+\contentsline {subsubsection}{Pinia}{22}{}%
+\contentsline {subsubsection}{Tailwind CSS}{22}{}%
+\contentsline {section}{\numberline {4.2}Autenticazione}{22}{}%
+\contentsline {subsection}{\numberline {4.2.1}Registrazione}{22}{}%
+\contentsline {subsubsection}{Laravel Route}{22}{}%
+\contentsline {subsubsection}{RegisteredUserController@store}{23}{}%
+\contentsline {subsubsection}{Pagina di registrazione}{24}{}%
+\contentsline {subsection}{\numberline {4.2.2}Accesso}{25}{}%
+\contentsline {subsubsection}{Laravel Route}{25}{}%
+\contentsline {subsubsection}{AuthenticatedTokenController@store}{26}{}%
+\contentsline {subsubsection}{Pagina di accesso}{27}{}%
+\contentsline {subsection}{\numberline {4.2.3}Disconnessione}{28}{}%
+\contentsline {subsubsection}{Laravel Route}{28}{}%
+\contentsline {subsubsection}{AuthenticatedTokenController@destroy}{28}{}%
+\contentsline {subsubsection}{Disconnessine dalla piattaforma}{28}{}%
+\contentsline {section}{\numberline {4.3}Gestione utente}{29}{}%
+\contentsline {subsection}{\numberline {4.3.1}Utente autenticato}{29}{}%
+\contentsline {subsubsection}{Laravel Route}{29}{}%
+\contentsline {subsubsection}{AuthenticatedTokenController@show}{29}{}%
+\contentsline {subsubsection}{Layout principale}{29}{}%
+\contentsline {subsection}{\numberline {4.3.2}Eliminazione e ripristino account}{30}{}%
+\contentsline {subsubsection}{Laravel Route}{30}{}%
+\contentsline {subsubsection}{ConfirmablePasswordController@store}{31}{}%
+\contentsline {subsubsection}{UserController@destroy}{31}{}%
+\contentsline {subsubsection}{UserDeleteController@update}{31}{}%
+\contentsline {subsubsection}{Eliminazione definitiva}{32}{}%
+\contentsline {subsubsection}{Pagina eliminazione account}{32}{}%
+\contentsline {subsubsection}{Pagina ripristino dell'account}{33}{}%
+\contentsline {section}{\numberline {4.4}Gestione del portfolio}{33}{}%
+\contentsline {subsection}{\numberline {4.4.1}Operazioni principali}{34}{}%
+\contentsline {subsubsection}{Laravel Route}{34}{}%
+\contentsline {subsubsection}{PortfolioController@store}{34}{}%
+\contentsline {subsubsection}{Pagina di creazione del portfolio}{35}{}%
+\contentsline {subsection}{\numberline {4.4.2}Visualizzazione del portfolio utente}{36}{}%
+\contentsline {subsubsection}{CMSController@show}{36}{}%
+\contentsline {subsubsection}{Layout CMS}{37}{}%
+\contentsline {subsubsection}{Pagina principale della sezione CMS}{37}{}%
+\contentsline {section}{\numberline {4.5}Gestione delle gallerie}{38}{}%
+\contentsline {subsection}{\numberline {4.5.1}Operazioni principali}{38}{}%
+\contentsline {subsubsection}{Laravel Route}{38}{}%
+\contentsline {subsubsection}{GalleryController@index}{38}{}%
+\contentsline {subsubsection}{GalleryController@store}{39}{}%
+\contentsline {subsubsection}{GalleryController@show}{39}{}%
+\contentsline {subsubsection}{GalleryController@update}{40}{}%
+\contentsline {subsubsection}{GalleryController@destroy}{41}{}%
+\contentsline {subsubsection}{Pagina delle gallerie}{41}{}%
+\contentsline {subsubsection}{Pagina di creazione di una galleria}{42}{}%
+\contentsline {subsubsection}{Pagina per la visualizzazione di una galleria}{42}{}%
+\contentsline {subsubsection}{Pagina per l'aggiornamento di una galleria}{43}{}%
+\contentsline {subsubsection}{Pulsante per l'eliminazione di una galleria}{44}{}%
+\contentsline {subsection}{\numberline {4.5.2}Archiviazione gallerie}{45}{}%
+\contentsline {subsubsection}{Laravel Route}{45}{}%
+\contentsline {subsubsection}{GalleryArchiveController@update}{45}{}%
+\contentsline {subsection}{\numberline {4.5.3}Ripristino ed eliminazione definitiva}{45}{}%
+\contentsline {subsubsection}{Pagina delle gallerie eliminate}{46}{}%
+\contentsline {subsection}{\numberline {4.5.4}Gestione post}{46}{}%
+\contentsline {subsubsection}{Laravel Route}{46}{}%
+\contentsline {subsubsection}{PostController@store}{47}{}%
+\contentsline {subsubsection}{PostController@destroy}{48}{}%
+\contentsline {subsubsection}{PostController@update}{48}{}%
+\contentsline {subsubsection}{Pagina di creazione di un post}{49}{}%
+\contentsline {section}{\numberline {4.6}Visualizzazione portfolio}{49}{}%
+\contentsline {subsection}{\numberline {4.6.1}Portfolio pubblico}{50}{}%
+\contentsline {subsubsection}{Laravel Route}{50}{}%
+\contentsline {subsubsection}{PortfolioController@show}{50}{}%
+\contentsline {subsubsection}{Layout portfolio}{51}{}%
+\contentsline {subsection}{\numberline {4.6.2}Sezione principale}{51}{}%
+\contentsline {subsubsection}{Laravel Route}{51}{}%
+\contentsline {subsubsection}{PortfolioHomeController@show}{52}{}%
+\contentsline {subsubsection}{Pagina principale del portfolio}{52}{}%
+\contentsline {subsection}{\numberline {4.6.3}Visualizzazione gallerie}{53}{}%
+\contentsline {subsubsection}{Laravel Route}{53}{}%
+\contentsline {subsubsection}{GalleryController@show}{54}{}%
+\contentsline {subsubsection}{Pagina contenete una galleria}{54}{}%
+\contentsline {subsection}{\numberline {4.6.4}About me}{55}{}%
+\contentsline {subsubsection}{Laravel Route}{55}{}%
+\contentsline {subsubsection}{AboutMeController@show}{55}{}%
+\contentsline {subsubsection}{Pagina ``about-me'' del portfolio}{56}{}%
+\contentsline {chapter}{\numberline {5}Conclusioni}{58}{}%
+\contentsline {section}{\numberline {5.1}Risultati ottenuti}{58}{}%
+\contentsline {section}{\numberline {5.2}Sviluppi futuri}{59}{}%
+\contentsline {chapter}{\numberline {A}Implementazione del database}{60}{}%
+\contentsline {section}{\numberline {A.1}Utente}{60}{}%
+\contentsline {subsection}{\numberline {A.1.1}Schema}{60}{}%
+\contentsline {subsection}{\numberline {A.1.2}Relazioni}{60}{}%
+\contentsline {section}{\numberline {A.2}Portfolio}{61}{}%
+\contentsline {subsection}{\numberline {A.2.1}Schema}{61}{}%
+\contentsline {subsection}{\numberline {A.2.2}Relazioni}{61}{}%
+\contentsline {section}{\numberline {A.3}Categoria sezione}{61}{}%
+\contentsline {subsection}{\numberline {A.3.1}Schema}{61}{}%
+\contentsline {section}{\numberline {A.4}Sezione}{62}{}%
+\contentsline {subsection}{\numberline {A.4.1}Schema}{62}{}%
+\contentsline {subsection}{\numberline {A.4.2}Relazioni}{62}{}%
+\contentsline {section}{\numberline {A.5}Biografia}{63}{}%
+\contentsline {subsection}{\numberline {A.5.1}Schema}{63}{}%
+\contentsline {section}{\numberline {A.6}Contatti}{63}{}%
+\contentsline {subsection}{\numberline {A.6.1}Schema}{63}{}%
+\contentsline {section}{\numberline {A.7}Galleria}{63}{}%
+\contentsline {subsection}{\numberline {A.7.1}Schema}{63}{}%
+\contentsline {subsection}{\numberline {A.7.2}Relazioni}{64}{}%
+\contentsline {section}{\numberline {A.8}Post}{64}{}%
+\contentsline {subsection}{\numberline {A.8.1}Schema}{64}{}%
+\contentsline {subsection}{\numberline {A.8.2}Relazioni}{64}{}%
+\contentsline {chapter}{\numberline {B}Endpoint dell'API}{65}{}%
+\contentsline {section}{\numberline {B.1}Autenticazione}{65}{}%
+\contentsline {section}{\numberline {B.2}Impostazioni utente}{65}{}%
+\contentsline {section}{\numberline {B.3}Content management system}{66}{}%
+\contentsline {section}{\numberline {B.4}Portfolio pubblico}{66}{}%
+\contentsline {chapter}{\numberline {C}Routes Vue.js}{67}{}%
+\contentsline {chapter}{Bibliografia}{75}{}%
+\contentsline {chapter}{Ringraziamenti}{77}{}%
